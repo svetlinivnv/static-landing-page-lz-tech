@@ -14,7 +14,7 @@ export default function Portfolio() {
       name: "PulseApp",
       description: "A cross-platform fitness tracker built with React Native.",
       image:
-        "https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80",
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/86/42/e886424a-dbb8-4abc-3683-683aa351cadb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
       tech: ["React Native"],
     },
     {
