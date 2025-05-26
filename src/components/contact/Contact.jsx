@@ -9,16 +9,59 @@ export default function Contact() {
       <div className="contact-container">
         <h2>Contact Us</h2>
         <p>We’d love to hear from you — reach out anytime.</p>
-        <div className="contact-info">
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:contact@lz-tech.org">contact@lz-tech.org</a>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          className="contact-form"
+        >
+          <input
+            type="hidden"
+            name="form-name"
+            value="contact"
+          />
+
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="Your name"
+            />
           </div>
-          <div>
-            <h4>Phone</h4>
-            <a href="tel:+359877650591">+359 877 650 591</a>
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="your@email.com"
+            />
           </div>
-        </div>
+
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="submit-button"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </section>
   );
