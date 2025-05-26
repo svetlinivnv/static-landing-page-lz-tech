@@ -1,0 +1,138 @@
+.header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 255, 247, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-family);
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
+}
+
+.logo svg path {
+  stroke: var(--primary-color);
+  transition: stroke 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--hover-color);
+}
+
+.logo:hover svg path {
+  stroke: var(--hover-color);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: var(--primary-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 255, 247, 0.15);
+  }
+
+  .nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}
