@@ -7,14 +7,13 @@ export default function Portfolio() {
       description:
         "A modern point-of-sale system built with Laravel and React.",
       image:
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80",
+        "https://arirms.com/wp-content/uploads/2020/05/Retail-Management-Software.png",
       tech: ["Laravel", "React"],
     },
     {
       name: "PulseApp",
       description: "A cross-platform fitness tracker built with React Native.",
-      image:
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/86/42/e886424a-dbb8-4abc-3683-683aa351cadb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+      image: "https://kean.blog/images/posts/pulse-app-store/promo-1.png",
       tech: ["React Native"],
     },
     {
@@ -22,7 +21,7 @@ export default function Portfolio() {
       description:
         "Web-based analytics dashboard for business KPIs and customer insights.",
       image:
-        "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
+        "https://cdn.dribbble.com/userupload/17454525/file/original-aa4cfea1c2eb4d0056e121e919321872.jpg",
       tech: ["React", "Laravel"],
     },
   ];
